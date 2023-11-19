@@ -13,3 +13,12 @@ class LoginPageLocators:
     PASSWORD_LINE = (By.XPATH,'//*[@name="st.password"]')
     SUPPORT_LINE = (By.XPATH,'//*[@data-l="t,restore"]')
     REGISTRATION_BUTTON = (By.XPATH,'//*[@class="button-pro __sec mb-3x"]')
+
+
+class LoginPageHelper(BasePage):
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.check_page()
+
+    def check_page(self):
+        self.find_element(LoginPageLocators.LOGIN_BUTTON)
