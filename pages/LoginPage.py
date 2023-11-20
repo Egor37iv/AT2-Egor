@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from pages.BasePage import BasePage
 
 class LoginPageLocators:
     LOGIN_BUTTON = (By.XPATH,'//*[@data-l="t,sign_in"]')
